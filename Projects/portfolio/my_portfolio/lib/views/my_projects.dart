@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:animate_do/animate_do.dart';
 // ignore: unused_import
 import 'package:my_portfolio/globals/app_assets.dart';
@@ -26,75 +27,58 @@ class _MyServicesState extends State<MyServices> {
       backgroundColor: AppColors.bgColor,
       body: Helper(
         mobile: Column(
-          mainAxisSize: MainAxisSize.min,
+          //mainAxisSize: MainAxisSize.min,
           children: [
             buildMyService(),
             const SizedBox(
               height: 60,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                  onTap: () {},
-                  onHover: (value) {
-                    setState(() {
-                      isSalat = value;
-                    });
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: InkWell(
-                      onTap: () {},
-                      onHover: (value) {
-                        setState(() {
-                          isSalat = value;
-                        });
-                      },
-                      child: buildAnimateContainer(
-                          title: 'Salat',
-                          asset: AppAsset.coding,
-                          hover: isSalat),
-                    ),
-                  ),
+            InkWell(
+              onTap: () {},
+              onHover: (value) {
+                setState(() {
+                  isSalat = value;
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(50),
+                child: buildAnimateContainer(
+                  title: 'Salat',
+                  asset: AppAsset.coding,
+                  hover: isSalat,
                 ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: InkWell(
-                    onTap: () {},
-                    onHover: (value) {
-                      setState(() {
-                        isQuiz = value;
-                      });
-                    },
-                    child: buildAnimateContainer(
-                        title: 'Quiz App',
-                        asset: AppAsset.brush,
-                        hover: isQuiz),
-                  ),
-                ),
-              ],
+              ),
             ),
             const SizedBox(
-              height: 6,
+              height: 24,
             ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  setState(() {
-                    isRoll = value;
-                  });
-                },
-                child: buildAnimateContainer(
-                    title: 'Roll Dice',
-                    asset: AppAsset.analytics,
-                    hover: isRoll),
+            InkWell(
+              onTap: () {},
+              onHover: (value) {
+                setState(() {
+                  isQuiz = value;
+                });
+              },
+              child: buildAnimateContainer(
+                title: 'Quiz App',
+                asset: AppAsset.brush,
+                hover: isQuiz,
+              ),
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            InkWell(
+              onTap: () {},
+              onHover: (value) {
+                setState(() {
+                  isRoll = value;
+                });
+              },
+              child: buildAnimateContainer(
+                title: 'Roll Dice',
+                asset: AppAsset.analytics,
+                hover: isRoll,
               ),
             ),
           ],
@@ -116,67 +100,52 @@ class _MyServicesState extends State<MyServices> {
                       isSalat = value;
                     });
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: InkWell(
-                      onTap: () {},
-                      onHover: (value) {
-                        setState(() {
-                          isSalat = value;
-                        });
-                      },
-                      child: buildAnimateContainer(
-                          title: 'Salat',
-                          asset: AppAsset.coding,
-                          hover: isSalat),
-                    ),
+                  child: buildAnimateContainer(
+                    title: 'Salat',
+                    asset: AppAsset.coding,
+                    hover: isSalat,
                   ),
                 ),
                 const SizedBox(
-                  height: 6,
+                  height: 24,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: InkWell(
-                    onTap: () {},
-                    onHover: (value) {
-                      setState(() {
-                        isQuiz = value;
-                      });
-                    },
-                    child: buildAnimateContainer(
-                        title: 'Quiz App',
-                        asset: AppAsset.brush,
-                        hover: isQuiz),
-                  ),
-                ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: InkWell(
-                    onTap: () {},
-                    onHover: (value) {
-                      setState(() {
-                        isRoll = value;
-                      });
-                    },
-                    child: buildAnimateContainer(
-                      title: 'Roll Dice',
-                      asset: AppAsset.analytics,
-                      hover: isRoll,
-                      width: 700,
-                      hoverWidth: 710,
-                    ),
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      isQuiz = value;
+                    });
+                  },
+                  child: buildAnimateContainer(
+                    title: 'Quiz App',
+                    asset: AppAsset.brush,
+                    hover: isQuiz,
                   ),
                 ),
               ],
             ),
+            const SizedBox(
+              height: 26,
+            ),
+            InkWell(
+              onTap: () {},
+              onHover: (value) {
+                setState(() {
+                  isRoll = value;
+                });
+              },
+              child: buildAnimateContainer(
+                title: 'Roll Dice',
+                asset: AppAsset.analytics,
+                hover: isRoll,
+                width: 725.0,
+                hoverWidth: 735.0,
+              ),
+            ),
           ],
         ),
         desktop: Column(
-          //mainAxisSize: MainAxisSize.min,
+          mainAxisSize: MainAxisSize.min,
           children: [
             buildMyService(),
             const SizedBox(
@@ -184,7 +153,6 @@ class _MyServicesState extends State<MyServices> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 InkWell(
                   onTap: () {},
@@ -193,64 +161,55 @@ class _MyServicesState extends State<MyServices> {
                       isSalat = value;
                     });
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: InkWell(
-                      onTap: () {},
-                      onHover: (value) {
-                        setState(() {
-                          isSalat = value;
-                        });
-                      },
-                      child: buildAnimateContainer(
-                          title: 'Salat',
-                          asset: AppAsset.coding,
-                          hover: isSalat),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 6,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
                   child: InkWell(
                     onTap: () {},
                     onHover: (value) {
                       setState(() {
-                        isQuiz = value;
+                        isSalat = value;
                       });
                     },
                     child: buildAnimateContainer(
-                        title: 'Quiz App',
-                        asset: AppAsset.brush,
-                        hover: isQuiz),
+                        title: 'Salat', asset: AppAsset.coding, hover: isSalat),
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      isQuiz = value;
+                    });
+                  },
+                  child: buildAnimateContainer(
+                    title: 'Quiz App',
+                    asset: AppAsset.brush,
+                    hover: isQuiz,
+                  ),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                InkWell(
+                  onTap: () {},
+                  onHover: (value) {
+                    setState(() {
+                      isRoll = value;
+                    });
+                  },
+                  child: buildAnimateContainer(
+                    title: 'Roll Dice',
+                    asset: AppAsset.analytics,
+                    hover: isRoll,
                   ),
                 ),
               ],
             ),
-            const SizedBox(
-              height: 6,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: InkWell(
-                onTap: () {},
-                onHover: (value) {
-                  setState(() {
-                    isRoll = value;
-                  });
-                },
-                child: buildAnimateContainer(
-                    title: 'Roll Dice',
-                    asset: AppAsset.analytics,
-                    hover: isRoll),
-              ),
-            ),
           ],
         ),
         bgColor: AppColors.bgColor,
-        paddingWidth: size.width * 0.1,
+        paddingWidth: size.width * 0.04,
       ),
     );
   }
@@ -292,7 +251,7 @@ class _MyServicesState extends State<MyServices> {
         color: AppColors.bgColor2,
         borderRadius: BorderRadius.circular(30),
         border:
-            hover ? Border.all(color: AppColors.themeColor, width: 8) : null,
+            hover ? Border.all(color: AppColors.themeColor, width: 3) : null,
         boxShadow: const [
           BoxShadow(
             color: Colors.black54,
@@ -302,35 +261,40 @@ class _MyServicesState extends State<MyServices> {
           ),
         ],
       ),
-      child: Column(children: [
-        Image.asset(
-          asset,
-          width: 50,
-          height: 50,
-          color: AppColors.themeColor,
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        Text(
-          title,
-          style: AppTextStyles.monStyle(color: Colors.white),
-        ),
-        const SizedBox(
-          height: 12,
-        ),
-        Text(
-          'Android developer with 1 year\'s experience '
-          'crafting top-tier apps in Java and Dart. Firm '
-          'grasp of Android SDK and Material Design.'
-          'User-focused, I prioritize clean code, app '
-          'performance',
-          style: AppTextStyles.normalStyle(fontSize: 14),
-          textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: 20),
-        AppButton.buildMaterialButton(onTap: () {}, buttonName: 'Read More'),
-      ]),
+      child: Column(
+        children: [
+          Image.asset(
+            asset,
+            width: 50,
+            height: 50,
+            color: AppColors.themeColor,
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          Text(
+            title,
+            style: AppTextStyles.monStyle(color: Colors.white),
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Text(
+            'Android developer with 1 year\'s experience '
+            'crafting top-tier apps in Java and Dart. Firm '
+            'grasp of Android SDK and Material Design.'
+            'User-focused, I prioritize clean code, app '
+            'performance',
+            style: AppTextStyles.normalStyle(fontSize: 14),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 20),
+          AppButton.buildMaterialButton(
+            onTap: () {},
+            buttonName: 'Read More',
+          ),
+        ],
+      ),
     );
   }
 }
